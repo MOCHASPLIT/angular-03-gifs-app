@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center align-items-center">
+  <img
+    [src]="url"
+    [alt]="alt || 'Unnamed image'"
+    class="card-img-top animate__animated animate__fadeIn"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+  @if (!hasLoaded) {
+    <img
+      src="assets/loader.svg"
+      alt="loader"
+      height="35"
+      width="35"
+      class="mt-3"
+    />
+  }
+</div>
