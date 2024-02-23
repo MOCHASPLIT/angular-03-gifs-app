@@ -3,3 +3,30 @@
   /* vh : view hight */
   width: 250px;
 }
+
+.burger-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  #sidebar {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+  }
+  #sidebar-body {
+    display: none;
+  }
+  #sidebar.show {
+    height: 100vh;
+  }
+  #sidebar.show #sidebar-body {
+    display: block;
+  }
+  .burger-menu {
+    display: block;
+  }
+}

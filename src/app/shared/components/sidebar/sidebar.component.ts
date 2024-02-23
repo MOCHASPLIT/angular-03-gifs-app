@@ -7,6 +7,8 @@ import { GifsService } from '../../../gifs/services/gifs.service';
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
+  public isSidebarBodyVis: boolean = false;
+
   get tags(): string[] {
     return this.gifsService.tagsHistory;
   }
@@ -14,6 +16,11 @@ export class SidebarComponent {
   constructor(private gifsService: GifsService) {}
 
   searchTag(newTag: string): void {
+    this.showHistory();
     this.gifsService.searchTag(newTag);
+  }
+
+  showHistory(): void {
+    this.isSidebarBodyVis = !this.isSidebarBodyVis;
   }
 }

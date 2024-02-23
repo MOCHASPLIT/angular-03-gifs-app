@@ -2,3 +2,9 @@
   height: 100%;
   overflow-y: auto;
 }
+
+@media only screen and (max-width: 767px) {
+  .row {
+    margin-top: 67px;
+  }
+}
