@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  z-index: 1;
+}
+
+.form-control:focus {
+  border-color: #ebceff;
+  box-shadow: 0 0 5px #ebceff;
+}
+
+.search-btn:active {
+  background-color: #ebceff;
+}

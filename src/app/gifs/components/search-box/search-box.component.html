@@ -1,9 +1,18 @@
-<h5>Search:</h5>
 <!--* #txtTagInput = referencia local, van con # -->
-<input
-  type="text"
-  class="form-control"
-  placeholder="Search gifs..."
-  (keyup.enter)="searchTag()"
-  #txtTagInput
-/>
+<div class="container p-0 m-0">
+  <h5>Search:</h5>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search gifs..."
+    (keyup.enter)="searchTag()"
+    #txtTagInput
+  />
+  <button
+    type="button"
+    class="btn p-0 m-0 border-0 search-btn my-1 mx-2"
+    (click)="searchTag()"
+  >
+    <img src="assets/search.svg" alt="search" height="26" width="26" />
+  </button>
+</div>
